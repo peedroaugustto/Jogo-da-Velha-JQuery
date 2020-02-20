@@ -1,3 +1,6 @@
+var rodada = 1;
+var matriz_jogo = Array(3);
+
 $(document).ready( function(){
 
     $('#btnIniciarJogo').click(function(){
@@ -24,7 +27,29 @@ $(document).ready( function(){
         $("#palco_jogo").show();
 
 
+
+
     });
+
+    $(".jogada").click(function(){
+        var idCampoClicado = this.id;
+        jogada(idCampoClicado);
+   });
+
+   function jogada(id){
+       var icone = '';
+       var ponto = 0;
+
+       if ((rodada % 2) == 1){
+           alert("É a vez do jogador 1");
+       }else{
+           alert("É a vez do jogado 2");
+       }
+       alert(rodada);
+       rodada++;
+   }
+
+
 
 
 });
