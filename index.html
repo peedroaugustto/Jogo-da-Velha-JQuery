@@ -5,11 +5,12 @@
 
 		<title>Jogo da velha</title>
 		<script src="jquery-2.2.1.js"></script>
+		<script src="jogo.js"></script>
 	</head>
 
 	<body>
 
-		<div id="paginaInicial" align="center">
+		<div id="pagina_inicial" align="center">
 			<table width="600px">
 				<tbody>
 					<tr>
@@ -22,24 +23,26 @@
 						<td align="center">
 							<img src="imagens/jogador_1.png" alt="">
 							<br/>
-							<input type="text" maxlength="10" placeholder="Apelido do jogador 1" style="border:  0px;">
+							<input id="entrada_apelido_jogador_1" type="text" maxlength="10" placeholder="Apelido do jogador 1" style="border:  0px;">
 						</td>
 						<td align="center">
-							<img src="imagens/iniciar.png" alt="">
+							<img id="btnIniciarJogo" src="imagens/iniciar.png" alt="">
 						</td>
 						<td align="center">
 							<img src="imagens/jogador_2.png" alt="">
 							<br/>
-							<input type="text" maxlength="10" placeholder="Apelido do jogador 2" style="border:  0px;">
+							<input id="entrada_apelido_jogador_2"  type="text" maxlength="10" placeholder="Apelido do jogador 2" style="border:  0px;">
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
-		<div id="palcoJogo" style="margin-top: 50px; text-align: center;">
+		<div id="palco_jogo" style="margin-top: 50px; text-align: center; display: none;">
 			<div style="display: inline-block;">
 				<img src="imagens/jogador_1.png" alt="">
+				<br/>
+				<span id="nome_jogador_1"></span>
 			</div>
 
 			<div style="display: inline-block;">
@@ -96,6 +99,8 @@
 
 			<div style="display: inline-block;">
 				<img src="imagens/jogador_2.png" alt="">
+				<br/>
+				<span id="nome_jogador_2"></span>
 			</div>
 
 		</div>
